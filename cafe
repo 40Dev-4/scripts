@@ -15257,7 +15257,7 @@ table.insert(cors,sandbox(Script1107,function()
 			db = true
 			pr:Play()
 			fadeout:Play()
-			txt.Text = "Changing Songs"
+			--txt.Text = "Changing Songs"
 			task.wait(1)
 			txt.Text = "Changing Songs"
 			s.Playing = false
@@ -15396,6 +15396,7 @@ table.insert(cors,sandbox(Script1107,function()
 end))
 Sound1108.Name = "Song"
 Sound1108.Parent = Part1105
+Sound1108.RollOffMaxDistance = 110
 Sound1108.RollOffMode = Enum.RollOffMode.InverseTapered
 Sound1109.Name = "Pressed"
 Sound1109.Parent = Part1105
