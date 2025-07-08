@@ -1130,7 +1130,7 @@ ClickDetector1110 = Instance.new("ClickDetector")
 Sound1111 = Instance.new("Sound")
 Sound1112 = Instance.new("Sound")
 BillboardGui1113 = Instance.new("BillboardGui")
-TextButton1114 = Instance.new("TextButton")
+TextBox1114 = Instance.new("TextBox")
 Model1115 = Instance.new("Model")
 Seat1116 = Instance.new("Seat")
 Script1117 = Instance.new("Script")
@@ -15253,6 +15253,7 @@ table.insert(cors,sandbox(Script1107,function()
 		max = #Songs
 		if db == false and not stopdelay then
 			txt.Text = "Changing Songs"
+			stop = 0
 			db = true
 			pr:Play()
 			fadeout:Play()
@@ -15418,27 +15419,25 @@ BillboardGui1113.Active = true
 BillboardGui1113.ClipsDescendants = true
 BillboardGui1113.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
 BillboardGui1113.StudsOffset = Vector3.new(0, 1.25, 0)
-TextButton1114.Name = "TextLabel"
-TextButton1114.Parent = BillboardGui1113
-TextButton1114.Size = UDim2.new(1, 0, 1, 0)
-TextButton1114.BackgroundColor = BrickColor.new("Institutional white")
-TextButton1114.BackgroundColor3 = Color3.new(1, 1, 1)
-TextButton1114.BackgroundTransparency = 1
-TextButton1114.BorderColor = BrickColor.new("Really black")
-TextButton1114.BorderColor3 = Color3.new(0, 0, 0)
-TextButton1114.BorderSizePixel = 0
-TextButton1114.Selectable = false
-TextButton1114.Font = Enum.Font.SourceSans
-TextButton1114.FontSize = Enum.FontSize.Size14
-TextButton1114.Text = ""
-TextButton1114.TextColor = BrickColor.new("Institutional white")
-TextButton1114.TextColor3 = Color3.new(1, 1, 1)
-TextButton1114.TextScaled = true
-TextButton1114.TextSize = 14
-TextButton1114.TextStrokeColor3 = Color3.new(0.835294, 0.709804, 0.215686)
-TextButton1114.TextStrokeTransparency = 0
-TextButton1114.TextWrap = true
-TextButton1114.TextWrapped = true
+TextBox1114.Name = "TextLabel"
+TextBox1114.Parent = BillboardGui1113
+TextBox1114.Size = UDim2.new(1, 0, 1, 0)
+TextBox1114.BackgroundColor = BrickColor.new("Institutional white")
+TextBox1114.BackgroundColor3 = Color3.new(1, 1, 1)
+TextBox1114.BackgroundTransparency = 1
+TextBox1114.BorderColor = BrickColor.new("Really black")
+TextBox1114.BorderColor3 = Color3.new(0, 0, 0)
+TextBox1114.BorderSizePixel = 0
+TextBox1114.Font = Enum.Font.SourceSans
+TextBox1114.FontSize = Enum.FontSize.Size14
+TextBox1114.Text = ""
+TextBox1114.TextColor = BrickColor.new("Institutional white")
+TextBox1114.TextColor3 = Color3.new(1, 1, 1)
+TextBox1114.TextScaled = true
+TextBox1114.TextSize = 14
+TextBox1114.TextStrokeColor3 = Color3.new(1, 0.854902, 0.129412)
+TextBox1114.TextWrap = true
+TextBox1114.TextWrapped = true
 Model1115.Name = "JobSeat"
 Model1115.Parent = Model0
 Seat1116.Parent = Model1115
@@ -17941,7 +17940,7 @@ Part1380.brickColor = BrickColor.new("Sand red")
 Part1380.FormFactor = Enum.FormFactor.Custom
 Part1380.formFactor = Enum.FormFactor.Custom
 for i,v in pairs(mas:GetChildren()) do
-	v.Parent = workspace
+	v.Parent = script
 	pcall(function() v:MakeJoints() end)
 end
 mas:Destroy()
